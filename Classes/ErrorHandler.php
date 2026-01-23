@@ -138,7 +138,7 @@ class ErrorHandler implements PageErrorHandlerInterface, LoggerAwareInterface
     protected function getExtConf()
     {
         if (is_null($this->extConf)) {
-            $this->extConf = $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['fox_handler'];
+            $this->extConf = $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['fox_handler'] ?? [];
         }
 
         return $this->extConf;
